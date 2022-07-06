@@ -1,0 +1,52 @@
+
+ 
+
+     .benefits-list{
+        display: flex;
+        margin-left: -30px;
+     
+    }
+
+
+
+   .benefits-title{ 
+       color: var(--title-text-color);
+       font-weight: 700;
+       font-size: 14px;
+       line-height: 1.14;
+       letter-spacing: 0.03em;
+       text-transform: uppercase;
+       margin-bottom: 10px;
+       }
+
+   .benefits-link{
+       flex-basis:calc((100% - 120px)/4);
+       margin-left: 30px;
+
+       .benefits-astronaut{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 270px;
+          height: 120px;
+          background: #F5F4FA;
+          border-radius: 4px;
+          margin-bottom: 30px;
+ 
+          .benefits-astronaut-icon{
+               width: 70px;
+               height: 70px;
+                } 
+         }
+
+       .benefits-text{
+          width: 270px;
+         font-size: 14px;
+         line-height: 1.71;
+         letter-spacing: 0.03em;
+        }
+       
+   }
+   
+   
+  
