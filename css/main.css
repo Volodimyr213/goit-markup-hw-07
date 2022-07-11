@@ -100,13 +100,13 @@ a {
   color: var(--accent-color);
 }
 
-.nav__site-carrent {
+.nav--site-carrent {
   display: block;
   padding-top: 32px;
   padding-bottom: 32px;
   color: var(--accent-color);
 }
-.nav__site-carrent::after {
+.nav--site-carrent::after {
   margin-bottom: -1px;
   left: 0;
   bottom: 0;
@@ -186,7 +186,8 @@ a {
   padding-bottom: 40px;
   padding-left: 41px;
 }
-.model .modal-title {
+
+.modal-title {
   font-weight: 700;
   font-size: 20px;
   line-height: 1.15;
@@ -194,16 +195,20 @@ a {
   letter-spacing: 0.03em;
   color: #212121;
 }
-.model .form-modal {
+
+.form-modal {
   margin-top: 12px;
 }
-.model .modal-field {
+
+.modal-field {
   margin-top: 10px;
 }
-.model .modal-chekbox {
+
+.modal-chekbox {
   margin-top: 20px;
 }
-.model .modal-input {
+
+.modal-input {
   width: 100%;
   height: 40px;
   padding-left: 42px;
@@ -215,10 +220,11 @@ a {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.model .modal-input:focus {
+.modal-input:focus {
   border-color: var(--accent-color);
 }
-.model .modal-input:focus + .model .modal-input {
+
+.modal-input:focus + .icon-input {
   fill: var(--accent-color);
 }
 
@@ -243,11 +249,6 @@ a {
   color: rgba(117, 117, 117, 0.5);
   outline: transparent;
 }
-
-.modal-text:hover {
-  border-color: var(--accent-color);
-}
-
 .modal-text:hover, .modal-text:focus {
   border-color: var(--accent-color);
 }
@@ -262,7 +263,7 @@ a {
   color: var(var(--gray-color));
 }
 
-.chekt-text a {
+.chekt-text__link {
   color: var(--accent-color);
   font-size: 14px;
   line-height: 1.71;
@@ -280,20 +281,17 @@ a {
   border-radius: 2px;
   border: 1px solid #212121;
 }
+.input-chekt:checked + .chekt-text .modal-chekbox__icon {
+  background-color: var(--accent-color);
+  border: none;
+}
+.input-chekt:focus + .chekt-text .modal-chekbox__icon {
+  border: 1px solid var(--accent-color);
+}
 
 .chekt-input {
   fill: transparent;
 }
-
-.input-chekt:checked + .chekt-text span {
-  background-color: var(--accent-color);
-  border: none;
-}
-
-.input-chekt:focus + .chekt-text span {
-  border: 1px solid var(--accent-color);
-}
-
 .input-chekt:checked + .chekt-text .chekt-input {
   background-color: var(--accent-color);
   border: none;
@@ -331,7 +329,6 @@ a {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
-
 .modal-button:focus {
   color: #FFFFFF;
 }
@@ -362,6 +359,8 @@ a {
 }
 
 .logo {
+  padding-top: 24px;
+  padding-bottom: 25px;
   color: var(--accent-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -369,10 +368,10 @@ a {
   line-height: 1.2;
   letter-spacing: 0.03em;
 }
-.logo .logo__head {
+.logo .logo--black {
   color: #000;
 }
-.logo .logo__footer {
+.logo .logo--wite {
   color: var(--prymory-white-color);
 }
 
@@ -595,10 +594,7 @@ button {
   justify-content: center;
   align-items: center;
 }
-.master-icon-link:hover {
-  background-color: var(--accent-color);
-}
-.master-icon-link:focus {
+.master-icon-link:hover, .master-icon-link:focus {
   background-color: var(--accent-color);
 }
 
@@ -639,10 +635,7 @@ button {
   border: 1px solid #AFB1B8;
   border-radius: 4px;
 }
-.customers-linky:hover {
-  border: 1px solid var(--accent-color);
-}
-.customers-linky:focus {
+.customers-linky:hover, .customers-linky:focus {
   border: 1px solid var(--accent-color);
 }
 
@@ -652,10 +645,7 @@ button {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   fill: #AFB1B8;
 }
-.customers-linky:hover .customers-icon {
-  fill: var(--accent-color);
-}
-.customers-linky:focus .customers-icon {
+.customers-linky:hover .customers-icon, .customers-linky:focus .customers-icon {
   fill: var(--accent-color);
 }
 
@@ -741,7 +731,8 @@ button {
 }
 
 .footer-field {
-  margin-left: 93px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .footer-field__title {
@@ -770,6 +761,9 @@ button {
   border-radius: 4px;
   background-color: transparent;
   margin-right: 12px;
+}
+.footer-field__input:hover {
+  border: 1px solid #2196F3;
 }
 .footer-field__input::placeholder {
   font-size: 16px;
@@ -880,10 +874,7 @@ button {
   transition-duration: 250ms;
   transition-delay: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.bakground-link-linky:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.bakground-link-linky:focus {
+.bakground-link-linky:hover, .bakground-link-linky:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 

@@ -91,13 +91,10 @@
             justify-content: center;
             align-items: center;
 
-           &:hover{
+           &:hover,  &:focus{
               background-color: var(--accent-color);
          }
 
-           &:focus{
-              background-color: var(--accent-color);
-         }
            
         }
 

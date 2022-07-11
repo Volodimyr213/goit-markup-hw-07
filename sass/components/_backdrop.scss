@@ -109,13 +109,10 @@
         color: rgba(117, 117, 117, 0.5);
         outline: transparent;
 
-        &:hover{
+        &:hover,&:focus{
             border-color: var(--accent-color);     
         }
 
-        &:focus{
-        border-color: var(--accent-color);
-        }
     }
     
     .chekt-text{
@@ -131,7 +128,7 @@
     }
     
     
-    .chekt-text a{
+    .chekt-text__link{
        color: var(--accent-color);
        font-size: 14px;
        line-height: 1.71;
@@ -149,27 +146,29 @@
             height: 15px;
             border-radius: 2px;
             border: 1px solid #212121;
+
+            .input-chekt:checked +.chekt-text &{
+                background-color: var(--accent-color);
+                border: none;
+             } 
+
+              
+             .input-chekt:focus +.chekt-text &{
+                border: 1px solid var(--accent-color);
+             }
          }
          
          .chekt-input{  
             fill: transparent;
+            
+            .input-chekt:checked +.chekt-text &{
+                background-color: var(--accent-color);
+                border: none;
+                fill: var(--prymory-white-color);
+             } 
          }
          
-           .input-chekt:checked +.chekt-text span{
-            background-color: var(--accent-color);
-            border: none;
-         } 
-         .input-chekt:focus +.chekt-text span{
-            border: 1px solid var(--accent-color);
-         }
-
-
-         .input-chekt:checked +.chekt-text .chekt-input{
-            background-color: var(--accent-color);
-            border: none;
-            fill: var(--prymory-white-color);
-         } 
-         
+        
 
 
          .input-wrap{
